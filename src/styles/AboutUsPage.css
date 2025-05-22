@@ -1,0 +1,408 @@
+/* AboutUsPage.css - Improved isolation to avoid conflicts */
+
+/* General page container with scoped variables - Added au- prefix for About Us specific selectors */
+.au-about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  /* Define colors locally for this component */
+  --about-primary-color: #0072CE;
+  --about-secondary-color: #0047AB;
+  --about-accent-color: #00A3E0;
+}
+
+/* Override app-container styles only within about page context */
+.au-about-page.app-container {
+  /* Add any specific overrides here */
+  max-width: 1200px;
+}
+
+/* Unified heading styles - Make them more specific to avoid conflicts */
+.au-about-page h1 {
+  font-size: 1.5rem;
+  color: #0047AB;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.au-about-page h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #0047AB;
+  text-align: center;
+}
+
+.au-about-page h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #0047AB;
+}
+
+/* Common paragraph styling - Scoped to about page */
+.au-about-page p {
+  color: #2c3e50;
+  line-height: 1.7;
+  font-size: 1rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Story section - Improved alignment */
+.au-about-page .au-about-story-section {
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.au-about-page .au-about-story {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.au-about-page .au-about-story-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.au-about-page .au-about-story-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.au-about-page .au-about-story p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.au-about-page .au-full-width {
+  width: 100%;
+}
+
+/* Section spacing */
+.au-about-page .au-about-section {
+  margin-bottom: 4rem;
+}
+
+/* Lists */
+.au-about-page .au-expertise-list,
+.au-about-page .au-approach-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.au-about-page .au-expertise-list li,
+.au-about-page .au-approach-list li {
+  background-color: #f0f7ff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  display: inline-block;
+  border: 1px solid #d0e3ff;
+}
+
+/* Card grid layout */
+.au-about-page .au-approach-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 2rem;
+}
+
+.au-about-page .au-approach-card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 8px;
+  border-top: 3px solid #4a90e2;
+  text-align: center;
+}
+
+.au-about-page .au-approach-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Mission section styling */
+.au-about-page .au-mission-content {
+  background: rgba(0, 71, 171, 0.03);
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.au-about-page .au-mission-content p {
+  font-size: 1.1rem;
+}
+
+/* Core Specialties grid */
+.au-about-page .au-core-specialties {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.au-about-page .au-specialty-item {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.au-about-page .au-specialty-item i {
+  font-size: 1.8rem;
+  color: #00A1E0;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* Values section */
+.au-about-page .au-values-section {
+  padding: 0;
+  margin-bottom: 4rem;
+}
+
+.au-about-page .au-values-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.au-about-page .au-values-intro {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.au-about-page .au-values-visual {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.au-about-page .au-value-pillar {
+  flex: 1;
+  min-width: 240px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.au-about-page .au-value-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #0063B2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.au-about-page .au-value-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Team section */
+.au-about-page .au-team-section {
+  background-color: #f9f9f9;
+  padding: 3rem;
+  border-radius: 12px;
+  margin-bottom: 4rem;
+}
+
+.au-about-page .au-team-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.au-about-page .au-leadership-note {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* CTA section */
+.au-about-page .au-about-cta {
+  background: rgba(0, 71, 171, 0.05);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.au-about-page .au-about-cta h2 {
+  color: #0047AB;
+  margin-bottom: 1.5rem;
+}
+
+.au-about-page .au-about-cta p {
+  max-width: 600px;
+  margin: 0 auto 1.8rem;
+}
+
+.au-about-page .au-about-cta-button {
+  display: inline-block;
+  background-color: #00A1E0;
+  color: white;
+  padding: 0.7rem 1.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive design - Make sure all selectors are properly scoped */
+@media (max-width: 992px) {
+  .au-about-page .au-core-specialties,
+  .au-about-page .au-values-visual {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .au-about-page .au-values-visual {
+    justify-content: space-around;
+  }
+  
+  .au-about-page .au-value-pillar {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .au-about-page h1 {
+    font-size: 1.4rem;
+  }
+  
+  .au-about-page h2 {
+    font-size: 1.3rem;
+  }
+  
+  .au-about-page h3 {
+    font-size: 1.1rem;
+  }
+  
+  .au-about-page p,
+  .au-about-page .au-mission-content p {
+    font-size: 0.95rem;
+  }
+  
+  .au-about-page .au-core-specialties,
+  .au-about-page .au-values-visual {
+    grid-template-columns: 1fr;
+  }
+  
+  .au-about-page .au-team-section,
+  .au-about-page .au-about-cta {
+    padding: 2rem 1rem;
+  }
+  
+  .au-about-page .au-specialty-item,
+  .au-about-page .au-value-pillar {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .au-about-page h1 {
+    font-size: 1.3rem;
+  }
+  
+  .au-about-page h2 {
+    font-size: 1.2rem;
+  }
+  
+  .au-about-page h3 {
+    font-size: 1rem;
+  }
+  
+  .au-about-page p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .au-about-page .au-about-cta {
+    padding: 1.5rem;
+  }
+  
+  .au-about-page .au-about-cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .au-about-page .au-approach-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Support for legacy class names without prefixes for backward compatibility */
+/* These are maintained with minimal styling to prevent conflicts */
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-story-section { margin-bottom: 4rem; padding: 0 1rem; }
+.about-story { max-width: 800px; margin: 0 auto; text-align: center; }
+.about-story-content { margin-top: 2rem; display: flex; flex-direction: column; align-items: center; }
+.about-story-text { max-width: 800px; margin: 0 auto; }
+.about-section { margin-bottom: 4rem; }
+.mission-content { background: rgba(0, 71, 171, 0.03); padding: 2.5rem; border-radius: 12px; max-width: 850px; margin: 0 auto; text-align: center; }
+.core-specialties { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+.specialty-item { padding: 2rem; background: #fff; border-radius: 12px; border: 1px solid rgba(0, 0, 0, 0.05); }
+.values-section { padding: 0; margin-bottom: 4rem; }
+.values-container { display: flex; flex-direction: column; align-items: center; max-width: 100%; }
+.values-intro { max-width: 800px; text-align: center; margin-bottom: 3rem; }
+.values-visual { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; width: 100%; }
+.value-pillar { flex: 1; min-width: 240px; max-width: 300px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 2rem; background-color: #ffffff; border-radius: 12px; border: 1px solid rgba(0, 0, 0, 0.05); }
+.value-icon { width: 70px; height: 70px; border-radius: 50%; background: #0063B2; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+.about-cta { background: rgba(0, 71, 171, 0.05); padding: 3rem; text-align: center; border-radius: 12px; margin-top: 2rem; border: 1px solid rgba(0, 0, 0, 0.03); }
+.about-cta-button { display: inline-block; background-color: #00A1E0; color: white; padding: 0.7rem 1.8rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; }
+.full-width { width: 100%; }
+
+/* Simplified media queries for legacy classes */
+@media (max-width: 992px) {
+  .core-specialties, .values-visual { grid-template-columns: repeat(2, 1fr); }
+  .values-visual { justify-content: space-around; }
+  .value-pillar { margin-bottom: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .core-specialties, .values-visual { grid-template-columns: 1fr; }
+  .about-cta { padding: 2rem 1rem; }
+  .specialty-item, .value-pillar { padding: 1.5rem; }
+}
+
+@media (max-width: 576px) {
+  .about-cta { padding: 1.5rem; }
+  .about-cta-button { width: 100%; max-width: 300px; }
+}

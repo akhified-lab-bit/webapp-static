@@ -1,0 +1,60 @@
+/* PageTransition.css - Cleaned version for testing */
+
+.page-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 71, 171, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.page-transition-overlay.active {
+  opacity: 1;
+}
+
+.page-transition-overlay.home-to-contact {
+  background: rgba(0, 71, 171, 0.7);
+}
+
+/* Body class to prevent issues during transitions */
+body.home-to-contact-transition {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+body.home-to-contact-transition::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  opacity: 1;
+}
+
+/* Hide contact page until ready */
+body.home-to-contact-transition .contact-page {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Show contact page when ready */
+body.home-to-contact-transition .contact-page.fade-in-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-transition-overlay.home-to-contact.active {
+    opacity: 1;
+  }
+}

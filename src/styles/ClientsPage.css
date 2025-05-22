@@ -1,0 +1,704 @@
+/* ClientsPage.css - Cleaned version for testing */
+
+.clients-page {
+  padding: 2.5rem 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  /* Define colors inline for testing instead of using CSS variables */
+  --clients-primary-color: #0072CE;
+  --clients-secondary-color: #0047AB;
+  --clients-accent-color: #00A3E0;
+}
+
+/* Typography - make sure each selector includes the parent class */
+.clients-page .clients-page-h1 {
+  font-size: 1.4rem;
+  color: #0047AB;
+  margin-bottom: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.clients-page .clients-page-h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.9rem;
+  text-align: center;
+}
+
+.clients-page .clients-page-h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+/* Intro section */
+.clients-page .clients-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.clients-page .clients-intro p {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Tabs container */
+.clients-page .tabs-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+/* Tab headers */
+.clients-page .tab-headers {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.clients-page .tab-header {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.7rem 0.5rem;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  border-bottom: 3px solid transparent;
+  background-color: #ffffff;
+  border-radius: 8px 8px 0 0;
+  z-index: 1;
+}
+
+.clients-page .tab-header.active {
+  background-color: #ffffff;
+  z-index: 2;
+  border-bottom-color: #00A3E0;
+}
+
+/* Tab icon */
+.clients-page .tab-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.clients-page .tab-icon i {
+  font-size: 1.3rem;
+}
+
+.clients-page .tab-name {
+  font-size: 0.85rem;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+}
+
+/* Tab content */
+.clients-page .tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 0 8px 8px 8px;
+  width: 100%;
+  max-width: 700px;
+  margin: -1px auto 0;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Client tabs */
+.clients-page .client-tabs-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.clients-page .client-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.clients-page .client-tab {
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  text-align: center;
+}
+
+.clients-page .client-tab.active {
+  font-weight: 700;
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Client category styling */
+.clients-page .client-tab[data-tab="erp"] {
+  color: #1a73e8;
+  border-color: #1a73e8;
+}
+
+.clients-page .client-tab[data-tab="digital"] {
+  color: #34a853;
+  border-color: #34a853;
+}
+
+.clients-page .client-tab[data-tab="hrms"] {
+  color: #ea4335;
+  border-color: #ea4335;
+}
+
+.clients-page .client-tab[data-tab="itda"] {
+  color: #fbbc04;
+  border-color: #fbbc04;
+}
+
+/* Client grid */
+.clients-page .clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.clients-page .client-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.clients-page .client-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.clients-page .client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.clients-page .client-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: #0047AB;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.clients-page .client-card p {
+  color: #2c3e50;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+.clients-page .client-type {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+/* Category colors - make more specific */
+.clients-page .erp .client-type {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+.clients-page .digital .client-type {
+  background-color: #e6f4ea;
+  color: #34a853;
+}
+
+.clients-page .hrms .client-type {
+  background-color: #fce8e6;
+  color: #ea4335;
+}
+
+.clients-page .itda .client-type {
+  background-color: #fef7e0;
+  color: #fbbc04;
+}
+
+/* Testimonials section */
+.clients-page .testimonials-section {
+  background-color: #f9f9f9;
+  padding: 4rem 0;
+  margin: 4rem 0;
+  position: relative;
+}
+
+.clients-page .testimonials-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.clients-page .testimonials-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.clients-page .testimonial-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.clients-page .testimonial-text {
+  font-style: italic;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.clients-page .testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.clients-page .author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-page .author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clients-page .author-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #0047AB;
+}
+
+.clients-page .author-info p {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Coming soon message */
+.clients-page .testimonials-coming-soon {
+  text-align: center;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.clients-page .coming-soon-icon {
+  margin-bottom: 1.5rem;
+}
+
+.clients-page .testimonials-coming-soon h2 {
+  color: #0047AB;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.clients-page .testimonials-coming-soon p {
+  color: #2c3e50;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Client icon more specific selectors */
+.clients-page .client-tab-home i {
+  background: none;
+  border-radius: 0;
+  border: none;
+  width: auto;
+  height: auto;
+  display: inline;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  color: inherit;
+}
+
+/* New flex grid layout for clients - improved organization */
+.clients-page .clients-flex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.clients-page .client-flex-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #f0f0f0;
+  height: 100%;
+}
+
+.clients-page .client-flex-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.clients-page .client-identity {
+  width: 100%;
+  padding: 1.5rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.clients-page .client-logo-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.clients-page .client-logo-placeholder {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.clients-page .client-identity h3 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.clients-page .client-category-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Category-specific styling - more specific */
+.clients-page .client-flex-card:nth-child(4n+1) .client-category-tag {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+.clients-page .client-flex-card:nth-child(4n+2) .client-category-tag {
+  background-color: #e6f4ea;
+  color: #34a853;
+}
+
+.clients-page .client-flex-card:nth-child(4n+3) .client-category-tag {
+  background-color: #fce8e6;
+  color: #ea4335;
+}
+
+.clients-page .client-flex-card:nth-child(4n+4) .client-category-tag {
+  background-color: #fff8e1;
+  color: #fbbc04;
+}
+
+.clients-page .client-info {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clients-page .client-info p {
+  color: #4a5568;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tab buttons styling */
+.clients-page .client-tabs-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  max-width: 900px;
+}
+
+.clients-page .client-tab-home {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.clients-page .client-tab-home:hover {
+  transform: translateY(-2px);
+}
+
+.clients-page .client-tab-home.active {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive styles - keep everything scoped to clients-page */
+@media (max-width: 992px) {
+  .clients-page .client-tabs {
+    gap: 1rem;
+  }
+  
+  .clients-page .client-tab {
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+  }
+
+  .clients-page .clients-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .clients-page .client-flex-card {
+    flex-direction: column;
+  }
+  
+  .clients-page .client-identity {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1.25rem 1rem;
+  }
+  
+  .clients-page .client-info {
+    padding: 1.25rem;
+  }
+
+  .clients-page .clients-flex-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-page .tab-headers {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .clients-page .tab-header {
+    width: 130px;
+    padding: 0.6rem 0.4rem;
+  }
+  
+  .clients-page .tab-content {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 0;
+  }
+
+  .clients-page .client-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .clients-page .client-tab {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .clients-page .clients-page-h1 {
+    font-size: 1.3rem;
+  }
+  
+  .clients-page .clients-page-h2 {
+    font-size: 1.2rem;
+  }
+  
+  .clients-page .clients-page-h3 {
+    font-size: 0.95rem;
+  }
+
+  .clients-page .clients-intro p {
+    font-size: 1rem;
+  }
+  
+  .clients-page .client-card {
+    padding: 1.5rem;
+  }
+  
+  .clients-page .client-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .clients-page .testimonials-coming-soon {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .clients-page .testimonials-coming-soon h2 {
+    font-size: 1.3rem;
+  }
+
+  .clients-page .testimonials-coming-soon p {
+    font-size: 1rem;
+  }
+
+  .clients-page .clients-flex-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .clients-page .tab-headers {
+    gap: 4px;
+  }
+  
+  .clients-page .tab-header {
+    width: 80px;
+    padding: 0.75rem 0.3rem;
+  }
+
+  .clients-page .client-tabs {
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 0.75rem;
+  }
+  
+  .clients-page .client-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .clients-page .clients-page-h1 {
+    font-size: 1.2rem;
+  }
+  
+  .clients-page .clients-page-h2 {
+    font-size: 1.1rem;
+  }
+  
+  .clients-page .clients-page-h3 {
+    font-size: 0.9rem;
+  }
+
+  .clients-page .clients-intro p {
+    font-size: 0.95rem;
+  }
+  
+  .clients-page .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-page .client-logo-container {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .clients-page .client-logo-placeholder {
+    font-size: 1.8rem;
+  }
+  
+  .clients-page .client-identity {
+    padding: 1.25rem 1rem;
+  }
+  
+  .clients-page .client-info {
+    padding: 1.25rem 1rem;
+  }
+  
+  .clients-page .client-info p {
+    font-size: 0.85rem;
+  }
+
+  .clients-page .testimonials-coming-soon h2 {
+    font-size: 1.2rem;
+  }
+
+  .clients-page .testimonials-coming-soon p {
+    font-size: 0.95rem;
+  }
+
+  .clients-page .clients-flex-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 1.5rem auto;
+  }
+}

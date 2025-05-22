@@ -1,0 +1,518 @@
+/* ContactUsPage.css - Fixes for alignment issues and CSS conflicts */
+
+/* Page wrapper with cu- prefix */
+.cu-contact-page-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #ffffff;
+}
+
+/* Fade transitions with cu- prefix */
+.cu-fade-in-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.cu-fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact page base styling with cu- prefix */
+.cu-contact-page {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 60px 0;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Page container styling with cu- prefix */
+.cu-contact-page .cu-contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* Typography with cu- prefix */
+.cu-contact-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0047AB;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-contact-page h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #0047AB;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-contact-page h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #0047AB;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Intro section with cu- prefix */
+.cu-contact-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 0 15px;
+}
+
+.cu-contact-intro p {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Contact grid layout with cu- prefix */
+.cu-contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 30px auto 0;
+  width: 100%;
+  max-width: 1160px;
+  box-sizing: border-box;
+}
+
+/* Base styles for info and form boxes with cu- prefix */
+.cu-contact-info, .cu-contact-form {
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cu-contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cu-contact-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cu-contact-info h2, .cu-contact-form h2 {
+  margin-bottom: 1.5rem;
+  color: #0047AB;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-business-hours {
+  margin-top: 2rem;
+}
+
+/* Contact information items with cu- prefix */
+.cu-info-item {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cu-info-item h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #0047AB;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-info-item h3 i {
+  margin-right: 10px;
+  width: 20px;
+  color: #00A1E0;
+  font-size: 1.3rem;
+}
+
+.cu-info-item p {
+  margin-bottom: 5px;
+  color: #2c3e50;
+  padding-left: 30px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Links styling with cu- prefix */
+.cu-info-item a {
+  color: #00A1E0;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-info-item a:hover {
+  color: #0094d0;
+  text-decoration: underline;
+}
+
+/* Business hours styling with cu- prefix */
+.cu-today-hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cu-open-status {
+  color: #28a745;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-open-status.closed {
+  color: #dc3545;
+}
+
+.cu-open-status i {
+  font-size: 0.7rem;
+  margin-right: 5px;
+}
+
+.cu-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-hours-table tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cu-hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.cu-hours-table td {
+  padding: 10px 0;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.cu-hours-table td:last-child {
+  text-align: right;
+  font-weight: 500;
+}
+
+.cu-hours-table .closed {
+  color: #dc3545;
+}
+
+/* Form styling with cu- prefix - improved alignment */
+.cu-form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cu-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-required {
+  color: #ff3b30;
+  margin-left: 2px;
+}
+
+/* Fixed input and textarea styles with cu- prefix */
+.cu-form-control {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: auto;
+  min-height: 44px;
+}
+
+.cu-form-control:focus {
+  border-color: #00A1E0;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 161, 224, 0.1);
+}
+
+.cu-form-control.error {
+  border-color: #dc3545;
+}
+
+.cu-error-message {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+textarea.cu-form-control {
+  min-height: 150px;
+  resize: vertical;
+  width: 100%;
+  padding: 12px 15px;
+}
+
+/* Submit button with cu- prefix */
+.cu-submit-btn {
+  display: block;
+  width: 100%;
+  background-color: #00A1E0;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.cu-submit-btn:hover {
+  background-color: #0094d0;
+}
+
+.cu-submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* WhatsApp styling with cu- prefix */
+.cu-whatsapp-link {
+  color: #25D366;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cu-whatsapp-link:hover {
+  color: #128C7E;
+  text-decoration: none;
+}
+
+.cu-whatsapp-link::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+}
+
+.cu-whatsapp-msg {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+  opacity: 0.8;
+  font-weight: 400;
+  padding-left: 30px;
+}
+
+/* Download hours button with cu- prefix */
+.cu-download-hours-btn {
+  background: transparent;
+  color: #00A1E0;
+  border: 1px solid #00A1E0;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cu-download-hours-btn i {
+  margin-right: 5px;
+}
+
+.cu-download-hours-btn:hover {
+  background-color: rgba(0, 161, 224, 0.1);
+}
+
+/* Responsive styles with cu- prefix */
+@media (max-width: 992px) {
+  .cu-contact-container {
+    gap: 25px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cu-contact-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .cu-contact-page .cu-contact-container {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+    max-width: calc(100% - 30px);
+  }
+  
+  .cu-contact-info {
+    order: 2;
+    margin-bottom: 0;
+  }
+  
+  .cu-contact-form {
+    order: 1;
+    margin-bottom: 20px;
+  }
+  
+  .cu-contact-page {
+    padding: 30px 0;
+  }
+  
+  .cu-contact-page h1 {
+    font-size: 1.4rem;
+  }
+  
+  .cu-contact-intro p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cu-contact-info, 
+  .cu-contact-form {
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .cu-contact-page .cu-contact-container {
+    width: 100%;
+    padding: 0 10px;
+    margin: 15px auto 0;
+    gap: 15px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .cu-contact-info h2, 
+  .cu-contact-form h2 {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .cu-info-item {
+    margin-bottom: 15px;
+  }
+  
+  .cu-info-item h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cu-info-item p {
+    padding-left: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .cu-form-group {
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+  
+  .cu-form-control {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px; /* Prevents iOS zoom on input focus */
+    -webkit-appearance: none; /* Fixes iOS rounded corners */
+    appearance: none;
+    padding: 10px 12px;
+  }
+  
+  .cu-submit-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px 10px;
+    -webkit-appearance: none; /* Fixes iOS button styling */
+    appearance: none;
+  }
+  
+  textarea.cu-form-control {
+    min-height: 120px;
+  }
+  
+  /* Fix for iOS zooming issues */
+  .cu-contact-page input, 
+  .cu-contact-page select, 
+  .cu-contact-page textarea {
+    font-size: 16px !important; 
+  }
+  
+  /* Fix container width on very small screens */
+  @media (max-width: 350px) {
+    .cu-contact-info, 
+    .cu-contact-form {
+      padding: 1rem;
+    }
+    
+    .cu-form-group label {
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+/* Font imports - Must be at the top */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* App-specific layout styles - Using variables from index.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  padding-top: 70px;
+  overflow-x: hidden;
+}
+
+/* Contact page specific classes */
+html.preparing-contact-page {
+  background-color: transparent;
+}
+
+/* Transition effects - scoped to specific classes */
+.page-transition {
+  opacity: 0.8;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out;
+}
+
+.contact-page .contact-container {
+  animation-delay: 0.1s;
+}
+
+.app::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, var(--primary-color, #0063B2), var(--accent-color, #FF5722));
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.app.page-transition::after {
+  opacity: 0.02;
+}
+
+/* Component-specific containers and layouts */
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.app-section {
+  padding-top: var(--space-xl, 2rem);
+  padding-bottom: var(--space-xl, 2rem);
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Page-specific container styles */
+.about-page.app-container,
+.services-page.app-container,
+.clients-page.app-container,
+.careers-page.app-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* App-specific button styles */
+.app-button {
+  display: inline-block;
+  background-color: var(--primary-color, #0063B2);
+  color: white;
+  padding: var(--space-sm, 0.5rem) var(--space-lg, 1.5rem);
+  border-radius: var(--border-radius-md, 0.375rem);
+  font-weight: 500;
+  transition: background-color var(--transition-normal, 0.3s ease);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.app-button:hover {
+  background-color: var(--accent-color, #FF5722);
+  color: white;
+}
+
+/* Component-specific styles */
+.bottom-cta-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, var(--primary-color, #0063B2), var(--accent-color, #FF5722));
+  overflow: hidden;
+  position: relative;
+}
+
+.bottom-cta {
+  background: transparent;
+  box-shadow: none;
+  margin: 0;
+  width: 100%;
+}
+
+.home-page {
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  animation: appFadeIn 0.5s ease-out;
+}
+
+/* Animation classes with renamed keyframes to avoid conflicts */
+.page-transition {
+  opacity: 0.9;
+  transition: opacity 0.4s ease-out;
+}
+
+/* Apply animations only to specific pages */
+.contact-page, .home-page {
+  animation: appFadeIn 0.5s ease-out;
+}
+
+@keyframes appFadeIn {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
